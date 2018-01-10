@@ -1,0 +1,67 @@
+	
+	.fixed-width {
+		width: 1200px;
+		margin: auto;
+	}
+	
+	nav {
+		position: fixed;
+		background-color: #d7bf56;
+		z-index: 99;
+	}
+	.col-2 {
+		width: calc(100% / 2 - 40px);
+		float: left;
+		margin: 0 20px;
+	}	
+	.col-3 {
+		width: calc(100% / 3 - 40px);
+		float: left;
+		margin: 0 20px;
+	}	
+	.col-4 {
+		width: calc(100% / 4 - 40px);
+		float: left;
+		margin: 0 20px;
+	}
+
+	/* 以下為表頭 */
+	nav{
+		position: fixed;
+		background-color: #d7bf56;
+		height: 100px;
+		/*overflow: hidden;*/
+	}
+	nav .logo {
+		float: left;
+	}
+	nav .logo img {
+		width: 200px;
+		margin: auto;
+		margin-left: 50px;
+	}
+	nav ul {
+		float: right;
+		margin-right: 50px;
+	}
+	nav li {
+		float: left;
+		line-height: 100px;
+	}
+	#about , #event, #product , #contact {
+		display: block;
+		height: 100px;
+		line-height: 100px;
+		color: white;
+		text-align: center;
+		font-size: 20px;
+		padding: 0 20px;
+	}
+	nav li div a {
+		display: none;
+		height: 50px;
+		line-height: 50px;
+		color: white;
+		padding: 0 20px;
+	}	
+		/* 以上為表頭  2018/01/10 粉*/
