@@ -28,7 +28,7 @@
 	/* 以下為表頭 */
 	nav{
 		position: fixed;
-		background-color: #d7bf56;
+		background-color: rgba(215,191,86,1);
 		height: 100px;
 		/*overflow: hidden;*/
 	}
@@ -40,11 +40,11 @@
 		margin: auto;
 		margin-left: 50px;
 	}
-	nav ul {
+	.father-ul {
 		float: right;
 		margin-right: 50px;
 	}
-	nav li {
+	.father-li {
 		float: left;
 		line-height: 100px;
 	}
@@ -57,11 +57,38 @@
 		font-size: 20px;
 		padding: 0 20px;
 	}
-	nav li div a {
-		display: none;
+	.father-li li {
 		height: 50px;
 		line-height: 50px;
 		color: white;
 		padding: 0 20px;
+	}
+	.father-li li a {
+		display: block;
 	}	
 		/* 以上為表頭  2018/01/10 粉*/
+
+		/* 以下為表尾  2018/01/10 粉*/
+		footer {
+			position: relative;
+			background-color: #d7bf56;
+			padding: 10px 0;
+			height: 100px;
+		}
+		footer span {
+			color: white;
+		}
+		footer .bottom	{
+			margin: 20px 0;
+			text-align: center;
+		}
+		footer p {
+			color: white;
+			font-size: 14px;
+			line-height: 30px;
+		}
+		.box {
+			height: 200px;
+			background-color: gray;
+		}
+		/* 以上為表尾  2018/01/10 粉*/
