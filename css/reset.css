@@ -1,16 +1,19 @@
-@import url();
-	*{
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif , "微軟正黑體" ;
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+	*{	font-family: "Courgette" , "Dancing Script" , "微軟正黑體", cursive, sans-serif;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
+	html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+		margin: 0;
+		padding: 0;
+	}
 	.full-width {
 		width: 100%;
 	}
-	.clearfix {
+	.clearfix::after {
 		content: "";
 		display: block;
 		clear: both;

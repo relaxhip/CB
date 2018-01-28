@@ -1,94 +1,882 @@
-	
-	.fixed-width {
-		width: 1200px;
-		margin: auto;
-	}
-	
-	nav {
-		position: fixed;
-		background-color: #d7bf56;
-		z-index: 99;
-	}
-	.col-2 {
-		width: calc(100% / 2 - 40px);
-		float: left;
-		margin: 0 20px;
-	}	
-	.col-3 {
-		width: calc(100% / 3 - 40px);
-		float: left;
-		margin: 0 20px;
-	}	
-	.col-4 {
-		width: calc(100% / 4 - 40px);
-		float: left;
-		margin: 0 20px;
-	}
+@media screen and (min-width: 960px){
+    .fixed-width {
+        width: 1200px;
+        margin: auto;
+    }
+    
+    .col-2 {
+        width: calc(100% / 2 - 40px);
+        float: left;
+        margin: 0 20px;
+    }   
+    .col-3 {
+        width: calc(100% / 3 - 40px);
+        float: left;
+        margin: 0 20px;
+    }   
+    .col-4 {
+        width: calc(100% / 4 - 40px);
+        float: left;
+        margin: 0 20px;
+    }
 
-	/* 以下為表頭 */
-	nav{
-		position: fixed;
-		background-color: rgba(215,191,86,1);
-		height: 100px;
-		/*overflow: hidden;*/
-	}
-	nav .logo {
-		float: left;
-	}
-	nav .logo img {
-		width: 200px;
-		margin: auto;
-		margin-left: 50px;
-	}
-	.father-ul {
-		float: right;
-		margin-right: 50px;
-	}
-	.father-li {
-		float: left;
-		line-height: 100px;
-	}
-	#about , #event, #product , #contact {
-		display: block;
-		height: 100px;
-		line-height: 100px;
-		color: white;
-		text-align: center;
-		font-size: 20px;
-		padding: 0 20px;
-	}
-	.father-li li {
-		height: 50px;
-		line-height: 50px;
-		color: white;
-		padding: 0 20px;
-	}
-	.father-li li a {
-		display: block;
-	}	
-		/* 以上為表頭  2018/01/10 粉*/
+    /* 以下為表頭 */
+    nav{
+        position: fixed;
+        background-color: rgba(215,191,86,1);
+        height: 100px;
+        z-index: 999;
+    }
+    nav .logo {
+        float: left;
+    }
+    nav .logo img {
+        width: 200px;
+        margin: auto;
+        margin-left: 50px;
+    }
+    .father-ul {
+        display: block;
+        float: right;
+        margin-right: 20px;
+    }
+    .father-li {
+        float: left;
+        line-height: 100px;
+        padding-left: 20px;
+        text-align: center; 
+    }
+    #about , #event, #product , #contact {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+    .father-li li {
+        /*height: 50px;*/
+        line-height: 40px;
+        color: white;
+        text-align: center;
+    }
+    
+    .father-li ul {
+        display: block;
+        background-color: rgba(215,191,86,0.7);
+        margin: auto;
+        z-index: 999;
+    }
+        /* 以上為表頭  2018/01/10 粉*/
 
-		/* 以下為表尾  2018/01/10 粉*/
-		footer {
-			position: relative;
-			background-color: #d7bf56;
-			padding: 10px 0;
-			height: 100px;
-		}
-		footer span {
-			color: white;
-		}
-		footer .bottom	{
-			margin: 20px 0;
-			text-align: center;
-		}
-		footer p {
-			color: white;
-			font-size: 14px;
-			line-height: 30px;
-		}
-		.box {
-			height: 200px;
-			background-color: gray;
-		}
-		/* 以上為表尾  2018/01/10 粉*/
+        /* 以下為表尾  2018/01/10 粉*/
+    footer {
+        position: relative;
+        background-color: #d7bf56;
+        /*padding: 10px 0;*/
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer span {
+        color: white;
+    }
+    footer .bottom  {
+        width: 100%;
+        padding: 10px ;
+        text-align: center;
+    }
+    footer p {
+        display: inline-block;  
+        margin: auto;
+        color: white;
+        font-size: 14px;
+    }
+    .footer-bar {
+        height: 30px;
+        line-height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer-bar span {
+        display: inline-block;
+        /*float: left;*/
+        margin: 0 10px;
+    }
+    .fa {
+        padding-top: 5px;
+    }
+    .icon{
+        width: 20px;
+        height: 20px;
+    }
+    .icon img {
+        margin: auto;   
+        width: 100%;
+        height: 100%;
+        /*margin-top: 5px;*/
+    }
+    /* 以上為表尾  2018/01/10 粉*/
+    
+    /*以下為首頁輪播 2018/01/18 粉*/
+    .slider {
+        background-color: rgba(215,191,86,0.6);
+    }
+    .slick {
+        width: 900px;
+        height: 87vh;
+        margin: auto;
+    }
+
+    .slider h1 {
+        display: none;
+        position: absolute; 
+        right: 10%; 
+        top: 23%;
+        color: #705507;
+        transform: rotate(10deg);
+        font-weight: 400;
+        font-size: 36px;
+        border: 1px solid transparent;
+        background-color: rgba(255,255,255,0.3);
+    }
+    .slider h2 {
+        display: none;
+        position: absolute; 
+        right: 16%; 
+        top: 32%;
+        color: #705507;
+        transform: rotate(10deg);
+        font-weight: 400;
+        font-size: 36px;
+        border: 1px solid transparent;
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    /*以下為ABOUT主頁*/
+    .about {
+        background-color: rgba(215,191,86,0.6);
+    }
+
+    .about-head {
+        width: 100%;
+        height: 40vh;
+        background-image: url("../image/about.jpg");
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 -100px;
+        position: relative;
+    }
+    .about-head h2 {
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        font-size: 60px;
+        letter-spacing: 10px;
+        color: #fff;
+        font-style: italic;
+        font-family: "微軟正黑體";
+    }
+    .about-main {
+        height: 315px;
+        position: relative;
+        margin: 20px;
+    }
+    .about-main img{
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        border: 1px solid #888;
+        position: relative;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: all .5s;
+    }
+    .about-main h4{
+        display: none;
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: #eee;
+        font-size: 40px;
+        font-weight: normal;
+    }
+    .about-main:hover img{
+        /*filter: grayscale(100%)opacity(90%);*/
+        opacity: .9;
+    }
+    .about-main:hover h4 {
+        display: block;
+    }
+
+    /*以下為歷程*/
+    .mile-stone{
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        /*top: -50px;*/
+        background-color: rgba(215,191,86,0.6);
+    }
+    .mile-article{
+        position: absolute;
+        display: none;
+    }
+    .mile-article h3 {
+        color: #b94f85;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+    .mile-article p {
+        font-size: 20px;
+        font-weight: 700;
+        width: 300px;
+        color: #555;
+        font-weight: 500;
+    }
+    .mile-article1 {
+        top: 13%;   
+        left: 8%;
+    }
+    .mile-article2 {
+        top: 26%;
+        right: 14%;
+    }
+    .mile-article3 {
+        top: 39%;
+        left: 8%;
+    }
+    .mile-article4 {
+        top: 50%;
+        right: 14%;
+    }
+    .mile-article5 {
+        top: 62%;
+        left: 8%;
+    }
+    .mile-article6 {
+        top: 75%;
+        right: 14%;
+    }
+
+    /*以下為AWARD*/
+    .award {
+        height: 100vh;
+        background-color: rgba(215,191,86,0.6);
+        padding: 50px 0;
+    }
+    .award-pic{
+        position: relative;
+        top: 150px; 
+    }
+    .new {
+        width: 30%;
+        position: absolute;
+        left: 13%;
+    }
+    .new1 {
+        top: 0;
+        /*z-index: 9;*/
+        transform: rotate(15deg);
+        box-shadow: 4px 4px 9px #888;
+    }
+    .new2 {
+        top: 40px;
+        /*z-index: 8;*/
+        transform: rotate(10deg);
+        left: 8%;
+        box-shadow: 4px 4px 9px #888;
+    }
+    .new3 {
+        /*z-index: 7;*/
+        top: 90px;
+        left: 5%;
+        transform: rotate(5deg);
+        box-shadow: 4px 4px 9px #888;
+    }
+    .new4 {
+        /*z-index: 6;*/
+        top: 140px;
+        left: 2%;
+        box-shadow: 4px 4px 9px #888;
+    }
+    .award-content {
+        position: absolute;
+        right: 100px;
+        top: 150px;
+        width: 400px;
+        display: none;
+        /*padding: 50px 0;*/
+    }
+    .record {
+        /*position: relative;*/
+        right: 50px;
+        width: 400px;
+    }
+    .record h4 {
+        color: #705507;
+        font-size: 20px;
+    }
+    .record h5 {
+        font-size: 15px;
+        
+    }
+    .record span{
+        font-size: 14px;    
+        font-weight: normal;
+    }
+    .award-exp {
+        /*position: relative;*/
+        right: 0;
+        width: 400px;
+    }
+    .award-exp h4{
+        font-size: 20px;
+        line-height: 50px;
+        color: #705507;
+    }
+
+    /*以下為IDEA*/
+    .about-idea {
+        position: relative;
+    }
+    .idea {
+        width: 100%;
+        height: 90vh;
+        background-image: url("../image/about-idea.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        /*opacity: 0.75;*/
+    }
+    .idea img {
+        width: 200px;
+        position: absolute;
+        right: 2%;
+        bottom: 1%;
+        border-radius: 100%;
+        display: none;
+        opacity: 0.7;
+    }
+    .idea-content {
+        width: 600px;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        line-height: 60px;
+        text-align:  center;
+        font-weight: 700;
+        font-size: 26px;
+        color: #705507;
+        font-style: italic;
+        letter-spacing: 3px;
+        text-shadow: 1px 1px 2px #fff;
+    }
+
+    .waz {
+        /*height: 600px;*/
+        padding: 150px 60px;
+        background-color: rgba(215,191,86,0.6);
+    }
+    .waz .wazin{
+        position: relative;
+    }
+    .waz .jssor{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        /*overflow: hidden;*/
+        /*float: left;*/
+    }
+    .waz .jssor .product1{
+        
+        width: 400px;
+        height: 400px;
+        background-image: url(../image/img/001.jpg);  
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+
+    }
+    .waz .jssor .product2{
+        width: 400px;
+        height: 400px;
+
+        background-image: url(../image/img/002.jpg);  
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .waz .jssor .product3{
+        width: 400px;
+        height: 400px;
+        background-image: url(../image/img/003.jpg);  
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .waz .jssor .product4{
+        width: 400px;
+        height: 400px;
+        background-image: url(../image/img/004.jpg);  
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .waz .textmessage{
+        /*float: left;*/
+        position: absolute;
+        left: 450px;
+        /*margin-bottom: 30px;*/
+
+    }
+    .textmessage h2{
+        /*border-bottom: 2px solid rgb(215,191,86);*/
+       font-size: 35px;
+    }
+    .textmessage h4{
+        
+        background-color: rgb(215,191,86);
+        color: #fff;
+        padding: 8px;
+        margin: 6px 0;
+        width: 240px;
+    }
+    .textmessage ul{
+        position: absolute;
+        margin: -20px 0;
+        /*left: -40px;*/
+        /*bottom: -160px;*/
+        top: 180px;
+
+    }
+    .textmessage li{
+        list-style-type: none;
+        border-bottom: 1px solid rgb(215,191,86);
+        padding: 5px 0;
+        font-size: 18px;
+        margin: 2.4px 2px;
+        
+    }
+    .textmessage p{
+        position: absolute;
+        border: 1px solid rgb(215,191,86);
+        /*border-radius: 6px;*/
+        padding: 12px;
+        font-size: 16px;
+        left: 220px;
+        top: 150px;
+        margin-top: -50px;
+        margin-left: 30px;
+        height: auto;
+        width: 100%;
+        margin-right: 30px;
+    }
+    .buybox{
+        background-color: rgb(215,191,86);
+        height: 300px;
+        width: 350px;
+    }
+    .buybox form {
+        position: absolute;
+        top: 490px;
+        left: 510px;
+        background-color: rgb(215,191,86);
+        height: 60px;
+        width: 240px;
+        padding: 20px 25px;
+    }
+    .buybox form select{
+        /*top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;*/
+    }
+    .buybox form input[type=submit]{
+        /*top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;*/
+    }
+    .buybox h6{
+        font-size: 18px;
+        /*margin-left: 12px;*/
+        color: #fff;
+        line-height: 16px;
+    } 
+    .lefft{
+        float: left;
+        margin-left: 5px;
+    }
+    
+
+
+    /* 以上為產品 2018/01/25 Sophie */
+    
+    /* 以下為產品列表 2018/01/26 Sophie */
+    .wazz{
+        padding: 150px 60px;
+        background-color: rgba(215,191,86,0.6);
+    }
+    .wazz .listbanner{
+        /*height: 400px;*/
+
+    }
+    .wazz .listbanner .jssor{
+        margin-right: 10px;
+    }
+    .wazz .product1{
+        /*position: relative;*/
+    }
+    .wazz .listbanner .textmessage{
+        padding: 50px 30px;
+    }
+    .wazz .listbanner .textmessage h2,
+    .wazz .listbanner .textmessage h4,
+    .wazz .listbanner .textmessage p,{
+        /*position: absolute;*/
+        /*height: 400px;*/
+        
+        background-color: rgb(215,191,86);
+        color: #fff;
+    }
+    .wazz .listbanner .textmessage p{
+        position: static;
+        width: 80%;
+        margin-left: 0;
+        margin-top: 10px;
+        height: 210px;
+    }
+    .textmessage a {
+        text-decoration: none;
+        color: black;
+    }
+    /* 以上為產品列表 2018/01/26 Sophie */
+        /* 以下為faq  2018/01/22 玶*/
+    .full{
+        width: 100%;
+    }
+    .buyer{
+        padding-top: 100px;
+        background-color: rgba(215,191,86,0.6);
+    }
+    .buyer img{
+        /*margin-top: 100px;*/
+    }
+    .buyer h1{
+        margin-top: -120px;
+        margin-bottom: 40px;
+        padding-left: 40px;
+        color: #fff;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        font-size: 75px;
+    }
+    .box{
+        padding-left: 30px;
+    }
+    .box h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: "微軟正黑體";
+        font-weight: bold;
+        color: #755830;
+        
+    }
+    .box h3:hover {
+        color: #fa0;
+    }
+    .box h3 {
+        display: block;
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #1cbca9;
+        cursor: pointer;
+    }
+    .box h5 {
+        display: block;
+        font-size: 20px;
+        padding-bottom: 10px;
+        font-weight: 200;
+        }
+
+    .box .span{
+        font-size: 30px;
+        color: #755830;
+        padding-right: 10px;
+    }
+    .box li {
+        display: list-item;
+        text-align: left;
+        padding-bottom: 10px;
+        font-size: 20px;
+        list-style: none;
+    }
+        /* 以上為faq  2018/01/22 玶*/
+        /* 以下為buy  2018/01/22 玶*/
+    .todo{
+        background-color: rgba(215,191,86,0.6);
+    }
+    .todo img{
+        margin-top: 100px;
+    }
+    .todo h1{
+        margin-top: -120px;
+        margin-bottom: 40px;
+        padding-left: 40px;
+        color: #fff;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        font-size: 75px;
+    }
+    .box-b{
+        position: relative;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+    .box-b h2{
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: justify;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #755830;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px 10px;
+        color: #755830;
+        font-size: 25px;
+        background-color: rgba(117, 88, 48, .4);
+        cursor:pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-b h2:hover {
+        color: #fff;
+    }
+    .box-b h3, h4{
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+    .box-b h3{
+        color: #0eaef9;
+    }
+    .box-b .content{
+        display: block;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        border: 1px solid #755830;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 20px;
+        word-spacing: normal;
+        margin-bottom: 10px; 
+        margin-top: 10px;
+        margin: auto;
+        line-height: 30px;
+        text-overflow: auto;
+    }
+    .box-b table {
+        width: 100%
+        margin: auto;
+    }
+    .box-b table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 15px;
+        text-align: left;
+        /*width: 97%;*/
+        margin-bottom: 20px;
+        font-size: 20px;
+        /*-webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;*/
+    }
+        /* 以上為buy  2018/01/22 玶*/
+
+        /* 以下為contact  2018/01/22 玶*//*
+    .col-2{
+        width: calc(100% / 2 - 30px);
+        height: 2000px;
+        margin-left: 15px;
+    }
+    .col-3{
+        width: calc(100% / 3 - 30px);
+        float: left;
+        margin: 50px 20px;
+    }*/
+    .touch{
+        padding: 100px 0;
+        height: 1000px;
+        /*background-color: rgba(0,0,0,0.6);*/
+        top: -100px;
+        background-color: rgba(215,191,86,0.6);
+    }
+    .touch h1{
+        margin-top: -120px;
+        margin-bottom: 40px;
+        padding-left: 40px;
+        color: #fff;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+        font-size: 75px;
+    }
+    .list{
+        width: 100%;    
+
+    }
+    .list .col-2:nth-of-type(1){
+        background-color: #bfa569;
+        border-radius: 10px;
+        margin-left: 25px;
+        padding: 30px 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 45%;
+        height: 430px;
+        /*position: absolute;*/
+    }
+    .list .col-2:nth-of-type(2){
+        width: 45%;
+    }
+    .list h3{
+        font-size: 20px;
+        text-align: center;
+        /*padding: 15px 0;*/
+    }
+    .list form {
+        text-align: center;
+    }
+    .list input[type="text"],
+    .list input[type="email"],
+    .list input[type="number"],
+    .list textarea{
+        width: 80%;
+        height: 50px;
+        margin: 15px 0;
+        /*padding: 10px 10px;*/
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        transition: all 0.3s;
+
+    }
+
+    .list input[type="text"]:focus,
+    .list input[type="email"]:focus,
+    .list input[type="number"]:focus,
+    .list textarea:focus{
+        padding: 10px 10px;
+        outline: 0;
+        border-bottom: 1px solid #A11763;
+    }
+    /*.list textarea:{
+        height: 100px;
+    }*/
+    .list input[type="submit"]{
+        margin: 10px auto;
+        height: initial;
+        line-height: initial;
+    }
+    /*input[type="submit"]{
+        font-size: 12px;
+        padding: 10px 10px;
+        background-color: #CDCA09;
+    }*/
+    .list input[type="submit"]{
+        display: block;
+        width: 80px;
+        height: 30px;
+        line-height: 5px;
+        text-align: center;
+        background-color: #755830;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        transition: all 0.3s;
+        font-size: 12px;
+        color: #fff;
+    }
+    .list input[type="submit"]:hover{
+        color: #f7ee47;
+        background-color: #f26046;
+    }
+    .list input[type="text"],
+    .list input[type="email"],
+    .list input[type="number"],
+    .list textarea{
+        padding-left: 10px;
+    }
+    .round{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
+    }
+    .round .col-3{
+        width: 135px;
+        height: 135px;
+        border: 2px solid #fff;
+        /*padding: 10px;*/
+        border-radius: 50%;
+        background-color: #755830;
+        color: #fff;
+        text-align: center;
+        /*margin-top: 15px;*//*
+        margin: 10px 5px;*/
+        /*margin-bottom: 10px;*/
+        word-wrap: break-word;
+        cursor:pointer;
+        margin: 10px auto;
+    }
+    .round .col-3 p{
+        text-align: center;
+        margin-top: 10px;
+        padding: 5px;
+        font-size: 6px;
+        font-family: Arial;
+        /*line-height: 15px;*/
+
+    }
+    .round .icon_touch{
+        font-size: 35px;
+        margin-top: 18px;
+    }
+    /*.touch p{
+        font-size: 10px;
+        margin-bottom: 15px;
+    }*/
+    .list .map{
+        width: 100%;
+        height: 280px;
+    }
+    .list .map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    
+        /* 以上為contact  2018/01/22 玶*/   
+
+}

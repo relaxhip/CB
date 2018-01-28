@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; user-scalable=1;">
+	<title>event</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/desktop.css">
+	<link rel="stylesheet" href="css/tablet.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/hamburger.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- <script src="js/main.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			/*width: 100%;*/
+			background-color: gray;
+		}
+		.full-width {
+            width: 100%;
+        }
+		.containerbbox {
+			
+			padding: 30px;
+			padding-top: 100px;
+			
+
+		}
+		.boxx {
+			width: 300px;
+			/*padding: 15px;*/
+			margin: 16px;
+			background-color: rgb(215,191,86);
+			border-top-left-radius:.6em;
+			border-top-right-radius:.6em;
+			border-bottom-right-radius:.6em;
+			border-bottom-left-radius:.6em;
+			/*border-radius: 10px;*/
+			box-shadow: 6px 6px 6px rgba(0,0,0,.2);
+		}
+
+		.boxx h5 {
+			height: 30px;
+			line-height: 34px;
+			color: #fff;
+			/*background-color: gray;*/
+			margin-bottom: 10px;
+			padding: 3px;
+			border-top-left-radius:em;
+			border-top-right-radius:em;
+			border-bottom-right-radius:em;
+			border-bottom-left-radius:em;
+			text-align: center;
+			letter-spacing: .6px;
+		}
+		.boxx p {
+			margin: 8px 0;
+			font-size: 15px;
+			line-height: 1.3em;
+			padding: 8px 18px;
+			letter-spacing: 1px;
+		}
+		.boxx  .notec {
+			width: 85%;
+			margin: auto;
+			/*border-radius: 26px;*/
+			background-color: rgba(210,210,210,.8);
+			margin-top: 10px;
+			margin-bottom: 26px;
+		}
+		.boxx .note p{
+			color: rgb(160,0,0);
+			font-size: 12px;
+			line-height: 1.4em;
+			padding: 10px;
+			text-align: center;
+			margin-bottom: 6px;
+		}
+		img {
+			width: 100%;
+		}
+		.containerbbox {
+			margin: auto;
+			/*width: 660px;*/
+		}
+	</style>
+<script>
+	$(function(){
+		$(".containerbbox").imagesLoaded(function(){
+			$(".containerbbox").masonry({
+				isFitWidth:true
+			});
+		});
+		//下拉選單
+		$(".father-ul").find("ul").hide();
+		$(".father-li").hover(function(){
+			$(this).find("ul").stop().slideToggle();
+		});
+
+		//漢堡表單
+		$('.hamburger').click(function(){
+			$(this).toggleClass("hamburger-x");
+			$(".father-ul").slideToggle("display");
+		});
+		$(window).resize(function(){
+			let w = $(window).width();
+			if(w>944){
+				$(".hamburger").next().show();
+			}else{
+				$(".hamburger").next().hide();
+				$(".hamburger").removeClass("hamburger-x");
+			}
+	});
+	})
+
+</script>
+</head>
+<body>
+	<nav class="full-width"><!--表頭-->
+		<div class="clearfix">
+			<div class="logo"><a href="index.html"><img src="image/LOGO.png" alt="查理布朗"></a></div>
+			<div class="hamburger"><span></span></div>
+			<ul class="father-ul">
+				<li class="father-li">
+					<a href="about.html" id="about" class="nav-top">About</a>
+					<ul>
+						<li><a href="about-idea.html">經營理念</a></li>
+						<li><a href="about-award.html">得獎紀錄</a></li>
+						<li><a href="about-miles.html">歷程</a></li>
+					</ul>
+				</li>
+				<li class="father-li"><a href="event.html" id="event" class="nav-top">Event</a>
+					<ul>
+						<li><a href="event.html">近期活動</a></li>
+					</ul>
+				</li>
+				<li class="father-li"><a href="product.html" id="product" class="nav-top">Product</a>
+					<ul>
+						<li><a href="product-egg.html">手工布丁</a></li>
+						<li><a href="product-candy.html">牛軋糖</a></li>
+						<li><a href="product-box.html">節慶禮盒</a></li>
+						<li><a href="product-Q.html">台灣Ｑ餅</a></li>
+					</ul>	
+				</li>
+				<li class="father-li"><a href="contact.html" id="contact" class="nav-top">Contact</a>
+					<ul>
+						<li><a href="contact.html">連絡我們</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav> <!-- 以上為表頭 -->
+
+	<div class="containerbbox">
+		<div class="boxx">
+			<h5>2018年1月9日</h5>
+			<h3></h3>
+			<img src="image/event/1/1.jpg">
+			<p>HAPPY NEW YEAR!!!!!!!!!!<br>
+			送上查理布朗春節型錄<br>
+			祝大家好運旺旺!!</p>
+		</div>
+		<div class="boxx">
+			<h5>2017年12月3日</h5>
+			<h3></h3>
+			<img src="image/event/2/2.jpg">
+			<p>叮叮噹 叮叮噹 鈴聲多響亮<br>
+			雖然台北沒有雪花、沒有奔跑的花鹿<br>
+			但是有查理布朗的聖誕甜品陪伴你們喔<br>
+			<br>
+			聖誕老人說：<br>
+			聖誕節商品數量有限，請事先訂購喔<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+					<p>
+					民生總店：台北市民生東路四段126號 <br>TEL：02-8770-6162<br>
+					忠孝復興店：台北市復興南路一段123號<br>TEL：02-2771-0705<br>
+					微風台北車站店：台北車站微風廣場一樓<br>
+					TEL：02-2389-4682<br>
+					輔大醫院門市：新北市泰山區貴子路69號<br> B1美食街 TEL：02-2908-3188
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年12月2日</h5>
+			<h3></h3>
+			<img src="image/event/3/3.jpg">
+			<p>【民生總店年終慶】<br>
+				年終慶開跑囉<br>
+				§ 買禮券送好禮<br>
+				熱銷商品二選一<br>
+				<br>
+				§ 買100送40<br>
+				買越多賺越多 (請大家注意使用期限喔)<br>
+				§ 明星商品大熱賣<br>
+				熱銷商品點點名<br>
+				<br>
+				§ 全民擠經濟<br>
+				吐司 指定品項可以寄包囉!!<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+					<p>
+					眾多商品買一送一<br>
+					買越多省越多<br>
+					活動詳細請參考DM及門市公告<br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年11月13日</h5>
+			<h3></h3>
+			<img src="image/event/4/4.jpg">
+			<p>【忠孝復興門市週年慶】<br>
+				期待已久的週年慶開跑囉<br>
+				<br>
+				§ 買禮券送好禮<br>
+				台北手信生活節得獎禮盒等你帶回家<br>
+				<br>
+				§ 買100送40<br>
+				買越多賺越多 (請大家注意使用期限喔)<br>
+				§ 明星商品大熱賣<br>
+				熱銷商品點點名<br>
+				<br>
+				§ 全民擠經濟<br>
+				吐司 指定品項可以寄包囉!!<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+					<p>
+					眾多商品買一送一<br>
+					買越多省越多<br>
+					活動詳細請參考DM及門市公告<br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年10月31日</h5>
+			<h3></h3>
+			<img src="image/event/5/5.jpg">
+			<p>不給糖就搗蛋<br>
+				今年的萬聖節好熱鬧啊<br>
+				查理布朗有好多的小妖怪出沒哦<br>
+				下次萬聖節不要忘記來查理布朗要糖果<br>
+				<br>
+				萬聖節前夕來店的小朋友<br>
+				可以拿到一份萬聖節小糖果喔!!<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+					<p>
+					團體活動 需事先報名<br>
+					每日數量有限 額滿為止<br>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年11月13日</h5>
+			<h3></h3>
+			<img src="image/event/6/6.jpg">
+			<p>Trick or Treat!!<br>
+				可愛小雞也化身黑色小雞<br>
+				穿著可愛南瓜衣<br>
+				跟大家同樂萬聖節喔!!<br>
+			</p>
+		</div>
+		<div class="boxx">
+			<h5>2017年10月3日</h5>
+			<h3></h3>
+			<img src="image/event/7/7.jpg">
+			<p>謝謝各位查理粉的熱情支持<br>
+				今年中秋為大家準備的35000盒月餅<br>
+				全數銷售一空!!!!<br>
+				<br>
+				雖然工廠師父跟包裝同仁們<br>
+				每天忙到都快爆肝了<br>
+				但能夠完成使命 把客人喜歡的禮盒送到您的面前<br>
+				我們就覺得好開心滿足啊<br>
+				<br>
+				中秋前一個半月~一個月會陸續滿單<br>今年沒買到的客人 不要打我明年拜託請早<br>也不再到門市來罵了 也不要去百貨公司樓管客訴了 拜託拜託……<br>
+				門市每日還有少數商品販售 售完為止<br>
+				遺憾不能接單 感謝您的愛護<br>
+				查理布朗祝您佳節愉快<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>	
+				溫馨提醒<br>
+				蛋黃酥 綠豆椪 芋肉酥 台灣Q餅 <br>長時間存放可放冰箱<br>烤箱預熱噴水烤過像剛出爐的哦<br>
+				綠豆椪冰的很好吃 您可以試試
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年9月11日</h5>
+			<h3></h3>
+			<img src="image/event/8/8.jpg">
+			<p>一年一度的中秋特賣會來囉~~!<br>
+				9/11-9/20 買禮券享好禮<br>
+				歡迎訂購月餅回家慶團圓<br>
+				<br>
+				特賣會活動：<br>
+				購買1200元禮券就送好禮二選一<br>
+				好禮一、五入台灣Q餅一盒<br>
+				好禮二、六入小雞咕咕起士鳳凰酥一盒<br>
+				<br>
+				祝您佳節愉快
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>桔祥如意、富貴花開系列禮盒已滿單<br>
+				其餘禮盒也將滿單，請盡早訂購以免向隅
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年8月28日</h5>
+			<h3></h3>
+			<img src="image/event/9/9.jpg">
+			<p>2017查理布朗中秋禮盒<br>
+				企業禮盒試吃服務提供中<br>
+				歡迎來信chirlebrown2004@gmail.com<br>
+				搶先報名go!<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>線上EDM https://goo.gl/nusn2K<br>
+				線上訂購 https://goo.gl/v2sGCt
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年7月31日</h5>
+			<h3></h3>
+			<img src="image/event/10/10.jpg">
+			<p>餐會點心的專家~查理布朗<br>
+				在優美的音樂會中<br>
+				吃著小點心身心靈都滿足了<br>
+				<br>
+				選擇多樣化甜鹹都有<br>
+				無刺鼻異味不造成困擾<br>
+				想吃多少自由夾取<br>
+				輕輕鬆鬆就是主辦達人<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>線上EDM https://goo.gl/nusn2K<br>
+				線上訂購 https://goo.gl/v2sGCt
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年7月26日</h5>
+			<h3></h3>
+			<img src="image/event/11/11.jpg">
+			<p>愛就要大聲說出來<br>
+				８８節祝最親愛的老爸今年發發發<br>
+				預購蛋糕再享８５折優惠<br>
+				<br>
+				我們特製了兩款限定蛋糕<br>
+				快用父親節限定款寵愛老爸<br>
+				<br>
+				帥氣歐爸<br>
+				以新鮮咖啡豆萃取濃縮液製作咖啡內餡<br>
+				搭配比利時巧克力調和咖啡的香氣<br>脆皮的內餡散發著堅果香<br>
+				<br>
+				啤酒杯<br>
+				特製蜂蜜威士忌奶霜餡帶有淡淡酒香<br>
+				搭配口感滑順的花生餡就是最經典的組合<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>父親節蛋糕僅限門市自取
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年7月5日</h5>
+			<h3></h3>
+			<img src="image/event/12/12.jpg">
+			<p>暑假出外踏青<br>
+				方便又好攜帶的麵包餐盒是您的最佳幫手<br>
+				可常溫存放<br>
+				依照餐費預算選配內容<br>
+				大台北範圍專車配送<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>單盒最低預算80元
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="boxx">
+			<h5>2017年6月21日</h5>
+			<h3></h3>
+			<img src="image/event/13/13.jpg">
+			<p>史上最火 我的芒果兒啊 <br>
+				香到沒人性的新鮮芒果殘忍的轟炸味蕾<br>
+				陪你到天涯海角的盒裝包裝<br>
+				不分時間場合隨時隨地想吃就吃<br>
+			</p>
+			<div class="notec">
+				<div class="note">
+				<p>滿4盒免運開催中在家納涼吃蛋糕<br>
+					每日到貨數量不定請私訊小編搶貨<br>
+					享受每口都是果肉的幸福<br>
+				</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer><!--以下表尾-->
+		<div class="bottom fixed-width">
+			<div class="footer-bar">
+				<span><a href="buy.html">購物須知</a></span>
+				<span>|</span>
+				<span><a href="FAQ.html">FAQ</a></span>
+				<span>|</span>
+				<span><a class="fa fa-facebook" href="https://www.facebook.com/chirlebrown/"> acebook</a></span>
+				<span>|</span>
+				<span class="icon"><a href="#"><img src="image/LINE_Icon.png" alt=""></a></span>
+			</div>
+			<p>營業時間：禮拜一至六09:00-16:00   客服電話：02-22782202   © 2017 查理布朗 All Rights</p>
+		</div>
+	</footer>
+</body>
+</html>

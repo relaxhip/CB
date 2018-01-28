@@ -2,64 +2,95 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; user-scalable=1;">
 	<title>查理布朗</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/desktop.css">
+	<link rel="stylesheet" href="css/tablet.css">
+	<link rel="stylesheet" href="css/mobile.css">
+	<link rel="stylesheet" href="css/hamburger.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="slick/slick.min.js"></script>
+
 </head>
 <body>
-	<div class="wraper wraper1 wraper2">
-		<nav class="full-width clearfix">
-			<div class="fixed-width">
-				<div class="logo"><img src="image/LOGO.png" alt="查理布朗"></div>
-				<ul class="father-ul">
-					<li class="father-li">
-						<a href="#" id="about" class="nav-top">About</a>
-						<ul>
-							<li><a href="#">經營理念</a></li>
-							<li><a href="#">得獎紀錄</a></li>
-							<li><a href="#">歷程</a></li>
-						</ul>
-					</li>
-					<li class="father-li"><a href="#" id="event" class="nav-top">Event</a>
-						<ul>
-							<li><a href="#">近期活動</a></li>
-						</ul>
-					</li>
-					<li class="father-li"><a href="#" id="product" class="nav-top">Product</a>
-						<ul>
-							<li><a href="#">手工布丁</a></li>
-							<li><a href="#">牛軋糖</a></li>
-							<li><a href="#">節慶禮盒</a></li>
-						</ul>	
-					</li>
-					<li class="father-li"><a href="#" id="contact" class="nav-top">Contact</a>
-						<ul>
-							<li><a href="#">連絡我們</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<footer>
-			<div class="bottom fixed-width">
-				<span><a href="#">購物須知</a></span>
-				<span>&nbsp;|&nbsp;</span>
-				<span><a href="#">FAQ</a></span>
-				<p>營業時間：禮拜一至六09:00-16:00   客服電話：02-22782202   © 2017 查理布朗 All Rights Reserved.</p>
-			</div>
-		</footer>
+	<nav class="full-width"><!--表頭-->
+		<div class="clearfix">
+			<div class="logo"><a href="index.html"><img src="image/LOGO.png" alt="查理布朗"></a></div>
+			<div class="hamburger"><span></span></div>
+			<ul class="father-ul">
+				<li class="father-li">
+					<a href="about.html" id="about" class="nav-top">About</a>
+					<ul>
+						<li><a href="about-idea.html">經營理念</a></li>
+						<li><a href="about-award.html">得獎紀錄</a></li>
+						<li><a href="about-miles.html">歷程</a></li>
+					</ul>
+				</li>
+				<li class="father-li"><a href="event.html" id="event" class="nav-top">Event</a>
+					<ul>
+						<li><a href="event.html">近期活動</a></li>
+					</ul>
+				</li>
+				<li class="father-li"><a href="product.html" id="product" class="nav-top">Product</a>
+					<ul>
+						<li><a href="product-egg.html">手工布丁</a></li>
+						<li><a href="product-candy.html">牛軋糖</a></li>
+						<li><a href="product-box.html">節慶禮盒</a></li>
+						<li><a href="product-Q.html">台灣Ｑ餅</a></li>
+					</ul>	
+				</li>
+				<li class="father-li"><a href="contact.html" id="contact" class="nav-top">Contact</a>
+					<ul>
+						<li><a href="contact.html">連絡我們</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav> <!-- 以上為表頭 -->
+	
+	<div class="slider">
+		<div class="slick">
+			<img src="image/slide1.jpg" alt="">
+			<img src="image/slide2.jpg" alt="">
+			<img src="image/slide3.jpg" alt="">	
+		</div>
+		<h1>Delicious Comes by</h1>
+		<h2>Experience</h2>
 	</div>
+		
+	<footer><!--以下表尾-->
+		<div class="bottom fixed-width">
+			<div class="footer-bar">
+				<span><a href="buy.html">購物須知</a></span>
+				<span>|</span>
+				<span><a href="FAQ.html">FAQ</a></span>
+				<span>|</span>
+				<span><a class="fa fa-facebook" href="https://www.facebook.com/chirlebrown/"> acebook</a></span>
+				<span>|</span>
+				<span class="icon"><a href="#"><img src="image/LINE_Icon.png" alt=""></a></span>
+			</div>
+			<p>營業時間：禮拜一至六09:00-16:00   客服電話：02-22782202   © 2017 查理布朗 All Rights</p>
+		</div>
+	</footer>
+	<script>
+		$(function(){
+			$('.slick').slick({
+				dots: false,
+				infinite: true,
+				speed: 500,
+				fade: true,
+				cssEase: 'linear',
+				autoplay: true,
+				arrows: false
+			});
+			$(".slider").find("h1").toggle(4000);
+			$(".slider").find("h2").delay(4000).toggle(1000);
+		});
+	</script>
 </body>
 </html>
